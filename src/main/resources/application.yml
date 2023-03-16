@@ -9,9 +9,14 @@ spring:
       ddl-auto: create
     properties:
       hibernate:
-#        show_sql: true
-        format_sql: true
+        show_sql: true # 콘솔에 SQL 출력 여부
+        format_sql: true # 가독성 높여주는 formatting 여부
 
 logging:
   level:
-    org.hibernate.sql: debug
+    org:
+      hibernate:
+        sql: debug
+        orm:
+          jdbc:
+            bind: trace # SQL 파라미터 확인 (스프링부트 3.0이상)
