@@ -22,6 +22,5 @@ public class OrderItem {
     private Order order;
 
     private int orderPrice; // 주문가격
-
     private int count; // 주문수량
 }
