@@ -21,6 +21,6 @@ public class OrderItem {
     @JoinColumn(name = "order_id")
     private Order order;
 
-    private int orderPrice;
-    private int count;
+    private int orderPrice; // 주문가격
+    private int count; // 주문수량
 }
