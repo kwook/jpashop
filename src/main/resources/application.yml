@@ -11,6 +11,9 @@ spring:
       hibernate:
         show_sql: true # 콘솔에 SQL 출력 여부
         format_sql: true # 가독성 높여주는 formatting 여부
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
 
 logging:
   level:
