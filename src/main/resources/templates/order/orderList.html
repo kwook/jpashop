@@ -6,12 +6,12 @@
   <div th:replace="fragments/bodyHeader :: bodyHeader"/>
   <div>
     <div>
-      <form th:object="${orderSearch}" class="form-inline">
-        <div class="form-group mb-2">
+      <form th:object="${orderSearch}" class="row g-3">
+        <div class="col-auto">
           <input type="text" th:field="*{memberName}" class="form-control" placeholder="회원명"/>
         </div>
-        <div class="form-group mx-sm-1 mb-2">
-          <select th:field="*{orderStatus}" class="form-control">
+        <div class="col-auto">
+          <select th:field="*{orderStatus}" class="form-select">
             <option value="">주문상태</option>
             <option th:each="status : ${T(jpabook.jpashop.domain.OrderStatus).values()}"
                     th:value="${status}"
@@ -19,7 +19,9 @@
             </option>
           </select>
         </div>
-        <button type="submit" class="btn btn-primary mb-2">검색</button>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary mb-2">검색</button>
+        </div>
       </form>
     </div>
     <table class="table table-striped">
